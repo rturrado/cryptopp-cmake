@@ -36,7 +36,9 @@ message( STATUS "Processor ${CMAKE_SYSTEM_PROCESSOR}" )
 #Version of last Crypto++ release
 set (cryptopp_Latest_Release 8.5.0)
 
-cmake_minimum_required(VERSION 2.8.6)
+cmake_minimum_required(VERSION 2.8.6...3.21)
+
+cmake_policy(SET CMP0126 NEW)
 
 if (NOT ${CMAKE_VERSION} VERSION_LESS 3.14)
   option (DOWNLOAD_SOURCE "Download the source for current stable version" ON)
